@@ -21,7 +21,7 @@ For instructions on how to use PuTTY to connect to your HDInsight Spark cluster,
 </li>
 <li><strong>Linux, Unix, and OS X users:</strong>
 For instructions on how to use the terminal to connect to your HDInsight Spark cluster, visit this
-<a href="http://go.microsoft.com/fwlink/p/?LinkID=619886">Azure documentation</a>.  The edge node address is of the form <code>sshuser@CLUSTERNAME-ed-ssh.azurehdinsight.net</code>
+<a href="http://go.microsoft.com/fwlink/p/?LinkID=619886">Azure documentation</a>.  The edge node address is of the form <code>USERNAME@CLUSTERNAME-ed-ssh.azurehdinsight.net</code>
 </li>
 <li>
 <strong>All platforms:</strong> Your login name and password are the ones you created when you deployed this solution from the <a href="http://aka.ms/campaign-hdi">Cortana Intelligence Gallery</a>  
@@ -33,10 +33,10 @@ For instructions on how to use the terminal to connect to your HDInsight Spark c
 * Once you have connected to the edge node you can access the Administration Utilities for the web server with:
 
 ```
-sudo dotnet /usr/lib64/microsoft-deployr/9.0.1/Microsoft.DeployR.Utils.AdminUtil/Microsoft.DeployR.Utils.AdminUtil.dll
+sudo /usr/local/bin/dotnet /usr/lib64/microsoft-r/rserver/o16n/9.1.0/Microsoft.RServer.Utils.AdminUtil/Microsoft.RServer.Utils.AdminUtil.dll
 ```
 
-Your server has been configuered with a password of  `D@tascience2017` for the  `admin` user.  You can use this utitlity to change the password if you wish. (If you do so, you will need to change the password in the  <strong>campaign_deployment.R</strong> script.)
+Your server has been configuered an `admin` user, using the same password you chose when you created the deployment.  You can use this utitlity to change the password if you wish. (If you do so, you will need to change the password in the  <strong>campaign_deployment.R</strong> script.)
 
 You can also use this utility to check on the status of the web server. 
 
